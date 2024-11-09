@@ -7,11 +7,46 @@ body {
     color: white;
 }
 
+/* Container */
 .container {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #ff00ff;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #ffffff;
+    background-color: #ffcc00;
+    padding: 10px 20px;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+nav ul li a:hover {
+    background-color: #ff0000;
+    color: #ffcc00;
 }
 
 /* Header */
@@ -35,15 +70,15 @@ header p {
 
 /* Main Content */
 main {
-    background-image: url('https://www.example.com/retro-background.gif'); /* Add a 90s-style GIF here */
-    background-repeat: no-repeat;
+    background-image: url('https://imgs.search.brave.com/cwxsAi7aw7AJpAwj_OJoFArdiYdF-YVB2dQPw0g1MHE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9taXN0/ZXJnaWYuY29tL21l/ZGlhLzUvbW9uZWRh/LWRvbGFyLWdpcmFu/ZG8tNjIzOTIuZ2lm.gif'); /* Add a 90s-style GIF here */
+    background-repeat: repeat;
     background-size: cover;
     padding: 20px;
 }
 
 .content {
-    background-color: #ffcc00;
-    border: 3px dashed #ff0000;
+    background-color: #ff0000;
+    border: 3px dashed #0011ffce;
     padding: 15px;
     margin-bottom: 15px;
     text-align: center;
@@ -62,11 +97,11 @@ main {
 /* Footer */
 footer {
     text-align: center;
-    background-color: #ff0000;
+    background-color: #851313;
     padding: 10px;
     color: white;
     font-size: 0.9em;
-    border-top: 3px solid #00ff00;
+    border-top: 3px solid #075207;
 }
 
 footer p {
