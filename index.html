@@ -3,49 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>90s School Project</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Wanderlust Travels</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #1e90ff;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background: #f4f4f4;
+            padding: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        nav a:hover {
+            color: #1e90ff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .service {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 30%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #1e90ff;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Navigation Bar with 3 Buttons -->
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#why">Why 90s?</a></li>
-                <li><a href="#features">Features</a></li>
-            </ul>
-        </nav>
 
-        <header>
-            <h1>Welcome to My 90s School Project!</h1>
-            <p>Featuring bright colors, pixel fonts, and other retro vibes!</p>
-        </header>
+<header>
+    <h1>Wanderlust Travels</h1>
+    <p>Your adventure begins here!</p>
+</header>
 
-        <main>
-            <section id="about" class="content">
-                <h2>About My Project</h2>
-                <p>This website is all about school projects made in the 90s. From neon colors to basic HTML, we look back at how websites were designed back in the day.</p>
-            </section>
+<nav>
+    <a href="#services">Services</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-            <section id="why" class="content">
-                <h2>Why 90s Web Design?</h2>
-                <p>In the 90s, web design was basic, with limited technology. But it was a time of creativity, with unique design styles like frames, animated GIFs, and splash pages.</p>
-            </section>
+<div class="container">
+    <section id="services">
+        <h2>Why Choose Us?</h2>
+        <p>At Wanderlust Travels, we specialize in creating unforgettable journeys tailored just for you. Whether you're dreaming of a tropical getaway, a cultural city escape, or an adrenaline-packed adventure, we’ve got you covered!</p>
 
-            <section id="features" class="content">
-                <h2>What You'll See Here</h2>
-                <ul>
-                    <li>Neon text and background colors</li>
-                    <li>GIF animations</li>
-                    <li>Classic 90s fonts</li>
-                </ul>
-            </section>
-        </main>
+        <div class="services">
+            <div class="service">
+                <h3>Customized Travel Packages</h3>
+                <p>Personalize your trip to fit your needs and budget.</p>
+            </div>
+            <div class="service">
+                <h3>Flight & Accommodation</h3>
+                <p>We handle the logistics so you can focus on enjoying your trip.</p>
+            </div>
+            <div class="service">
+                <h3>Expert Travel Guides</h3>
+                <p>Gain insider tips from our experienced travel experts.</p>
+            </div>
+        </div>
+    </section>
+</div>
 
-        <footer>
-            <p>&copy; 2024 My 90s School Project | Made with HTML and CSS</p>
-        </footer>
-    </div>
+<footer>
+    <p>© 2024 Wanderlust Travels. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
