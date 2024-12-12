@@ -3,96 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanderlust Travels</title>
+    <title>JAM VR Travel</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
         }
         header {
-            background: #1e90ff;
+            background-color: #222;
             color: white;
-            padding: 20px 10px;
+            padding: 10px 20px;
             text-align: center;
         }
         nav {
-            text-align: center;
-            background: #f4f4f4;
-            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
         }
         nav a {
-            margin: 0 15px;
+            color: white;
             text-decoration: none;
-            color: #333;
+            margin: 0 15px;
+            font-weight: bold;
         }
         nav a:hover {
-            color: #1e90ff;
+            text-decoration: underline;
         }
-        .container {
+        .content {
             padding: 20px;
         }
-        .services {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .service {
-            text-align: center;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 30%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         footer {
+            background-color: #222;
+            color: white;
             text-align: center;
             padding: 10px 0;
-            background: #1e90ff;
-            color: white;
             margin-top: 20px;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>JAM VR Travel</h1>
+        <p>Experience the world from the comfort of your home</p>
+    </header>
 
-<header>
-    <h1>Wanderlust Travels</h1>
-    <p>Your adventure begins here!</p>
-</header>
+    <nav>
+        <a href="#about">Home</a>
+        <a href="#tvshows">TV Shows</a>
+        <a href="#movies">Movies</a>
+        <a href="#recently">Recently Added</a>
+        <a href="#mylist">My List</a>
+    </nav>
 
-<nav>
-    <a href="#services">Services</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<div class="container">
-    <section id="services">
-        <h2>Why Choose Us?</h2>
-        <p>At Wanderlust Travels, we specialize in creating unforgettable journeys tailored just for you. Whether you're dreaming of a tropical getaway, a cultural city escape, or an adrenaline-packed adventure, we’ve got you covered!</p>
-
-        <div class="services">
-            <div class="service">
-                <h3>Customized Travel Packages</h3>
-                <p>Personalize your trip to fit your needs and budget.</p>
-            </div>
-            <div class="service">
-                <h3>Flight & Accommodation</h3>
-                <p>We handle the logistics so you can focus on enjoying your trip.</p>
-            </div>
-            <div class="service">
-                <h3>Expert Travel Guides</h3>
-                <p>Gain insider tips from our experienced travel experts.</p>
-            </div>
+    <div class="content">
+        <div class="section" id="about">
+            <h2>About JAM VR Travel</h2>
+            <p>Our name “JAM” comes from the names of our team: Jon, Aitor, and Mario. With JAM VR Travel, you will experience a virtual reality visit to three famous places around the world from the comfort of your home.</p>
         </div>
-    </section>
-</div>
 
-<footer>
-    <p>© 2024 Wanderlust Travels. All rights reserved.</p>
-</footer>
+        <div class="section" id="locations">
+            <h2>Locations</h2>
+            <h3>1. Warner Bros Madrid</h3>
+            <p>Visit several attractions in this theme park in Madrid, including:</p>
+            <ul>
+                <li>Batman Gotham City Escape</li>
+                <li>Superman</li>
+                <li>Roadrunner "Bip Bip"</li>
+            </ul>
 
+            <h3>2. Twin Towers</h3>
+            <p>Experience the Twin Towers from both the outside and inside, feeling like you're back in the 2000s. For an additional 15€, you can even fly around the towers and visit Manhattan as it was in the year 2000.</p>
+
+            <h3>3. Norway</h3>
+            <p>Witness the natural wonder of the Aurora Polaris, explore the local town, and enjoy breathtaking mountain views.</p>
+        </div>
+
+        <div class="section" id="benefits">
+            <h2>Why Travel in VR?</h2>
+            <p>Traveling in VR is easier, better for the planet, and more accessible for everyone, including busy individuals and those with disabilities. It's also cheaper than traditional travel and doesn’t contribute to pollution.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Project Team: Jon Fernández León, Mario Galende García, Aitor Sainz Rascón</p>
+        <p>Art Direction: Jon Fernández León | Sound Direction: Aitor Sainz, Jon Fernández | Text Direction: Mario Galende, Aitor Sainz</p>
+        <p>&copy; 2024 JAM VR Travel</p>
+    </footer>
 </body>
 </html>
