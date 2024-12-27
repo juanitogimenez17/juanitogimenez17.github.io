@@ -61,17 +61,17 @@
         .button-container {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            left: 50%;
+            transform: translate(-50%, 30px);
             display: none;
             opacity: 0;
-            transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
         .button-container.visible {
             display: block;
             opacity: 1;
-            transform: translateY(0);
+            transform: translate(-50%, 0);
         }
 
         .button-container a {
@@ -137,12 +137,10 @@
     </footer>
 
     <script>
-        // Mostrar el botón con animación lenta
+        // Mostrar el botón con animación suave
         window.addEventListener("scroll", () => {
             const buttonContainer = document.getElementById("buttonContainer");
             const scrollPosition = window.scrollY;
-            const content = document.querySelector(".content");
-            const contentBottom = content.getBoundingClientRect().bottom;
 
             if (scrollPosition > 100) {
                 buttonContainer.classList.add("visible");
