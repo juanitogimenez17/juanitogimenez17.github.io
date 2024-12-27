@@ -18,9 +18,18 @@
             text-align: center;
             min-height: 200vh;
             overflow-x: hidden;
+        }
+
+        /* Fondo dinámico */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: url('background.png') no-repeat center center;
             background-size: cover;
-            background-attachment: fixed; /* Esto crea el efecto de movimiento con el scroll */
+            z-index: -1;
         }
 
         /* Cabecera */
@@ -112,6 +121,9 @@
     </style>
 </head>
 <body>
+    <!-- Fondo dinámico -->
+    <div class="background" id="background"></div>
+
     <!-- Cabecera -->
     <header>
         <h1>Directo Extensible - TitoPinha</h1>
@@ -149,8 +161,11 @@
             } else {
                 buttonContainer.classList.remove("visible");
             }
+
+            // Desplazar el fondo con el scroll
+            const background = document.getElementById("background");
+            background.style.transform = `translateY(${scrollPosition * 0.5}px)`;
         });
     </script>
 </body>
 </html>
-        // Si lees esto la chupas gratis
