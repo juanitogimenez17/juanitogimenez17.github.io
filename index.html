@@ -17,7 +17,7 @@
             background: linear-gradient(135deg, #3b3b98, #6a89cc);
             color: #ffffff;
             text-align: center;
-            min-height: 200vh; /* Asegura suficiente scroll */
+            min-height: 200vh;
             overflow-x: hidden;
         }
 
@@ -42,34 +42,32 @@
 
         /* Contenido principal */
         .content {
-            height: 50vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            position: relative;
             padding: 20px;
+            gap: 20px;
         }
 
-        .scroll-text {
+        .content p {
             font-size: 1.8rem;
-            margin: 10px 0;
-            opacity: 0.8;
-            transform: translateY(50px);
-            transition: transform 0.5s, opacity 0.5s;
-        }
-
-        .scrolled .scroll-text {
-            transform: translateY(-30px);
-            opacity: 1;
+            line-height: 1.6;
+            opacity: 0.9;
+            transition: opacity 0.5s ease;
         }
 
         /* Botón */
-        .content a {
+        .button-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .button-container a {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            font-size: 1.2rem;
+            padding: 15px 30px;
+            font-size: 1.5rem;
             color: #ffffff;
             background: #9146ff;
             text-decoration: none;
@@ -78,7 +76,7 @@
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
         }
 
-        .content a:hover {
+        .button-container a:hover {
             background: #772ce8;
             transform: scale(1.1);
         }
@@ -110,13 +108,13 @@
 
     <!-- Contenido principal -->
     <div class="content">
-        <p class="scroll-text">¡Hoy es el gran día! Ven al directo extensible. 🚀</p>
-        <a href="https://twitch.tv/titopinha" target="_blank">¡Ir a Twitch!</a>
-    </div>
-
-    <div class="content">
-        <p class="scroll-text">¡Momentos épicos te esperan! 🎉</p>
-        <a href="https://twitch.tv/titopinha" target="_blank">¡Únete ahora!</a>
+        <p>¡Hoy es el gran día! Ven al directo extensible. 🚀</p>
+        <p>Risas, emoción y caos garantizados. 🎉</p>
+        <p>¡Momentos épicos que no querrás perderte! 😎</p>
+        <!-- Contenedor del botón -->
+        <div class="button-container" id="buttonContainer">
+            <a href="https://twitch.tv/titopinha" target="_blank">¡Ir a Twitch!</a>
+        </div>
     </div>
 
     <!-- Pie de página -->
@@ -128,17 +126,17 @@
     </footer>
 
     <script>
-        // Detectar scroll y aplicar animación
-        document.addEventListener("scroll", () => {
-            const contents = document.querySelectorAll(".content");
-            contents.forEach((content) => {
-                const rect = content.getBoundingClientRect();
-                if (rect.top >= 0 && rect.top <= window.innerHeight) {
-                    content.classList.add("scrolled");
-                } else {
-                    content.classList.remove("scrolled");
-                }
-            });
+        // Mostrar el botón cuando llegas al final del contenido
+        window.addEventListener("scroll", () => {
+            const buttonContainer = document.getElementById("buttonContainer");
+            const content = document.querySelector(".content");
+            const contentBottom = content.getBoundingClientRect().bottom;
+
+            if (contentBottom <= window.innerHeight) {
+                buttonContainer.style.display = "block";
+            } else {
+                buttonContainer.style.display = "none";
+            }
         });
     </script>
 </body>
