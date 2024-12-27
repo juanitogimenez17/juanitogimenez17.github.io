@@ -3,36 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directo Extensible</title>
+    <title>Directo Extensible - TitoPinha</title>
     <style>
+        /* Estilo general */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background: linear-gradient(135deg, #3b3b98, #6a89cc);
+            color: #ffffff;
+            text-align: center;
         }
-        h1 {
-            color: #333;
-            margin-top: 20%;
+
+        /* Cabecera principal */
+        header {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
         }
-        a {
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+        }
+
+        /* Sección principal */
+        .content {
+            padding: 40px 20px;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Botón llamativo */
+        .content a {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #9146ff;
-            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            color: #ffffff;
+            background: #9146ff;
             text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
+            border-radius: 30px;
+            transition: background 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
         }
-        a:hover {
-            background-color: #772ce8;
+
+        .content a:hover {
+            background: #772ce8;
+        }
+
+        /* Sección adicional */
+        .footer {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .footer a {
+            color: #9146ff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Directo Extensible - 27 de diciembre</h1>
-    <a href="https://twitch.tv/titopinha" target="_blank">¡Métete pingo!</a>
+    <!-- Cabecera -->
+    <header>
+        <h1>Directo Extensible - TitoPinha</h1>
+        <p>¡No te lo pierdas! Este 27 de diciembre.</p>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="content">
+        <h2>¡Hoy es el gran día!</h2>
+        <p>
+            Únete al directo más divertido y caótico del año. Un stream extensible lleno de sorpresas, 
+            risas y mucha emoción. ¡No querrás perdértelo!
+        </p>
+        <a href="https://twitch.tv/titopinha" target="_blank">¡Métete pingo!</a>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>
+            Sígueme en <a href="https://twitch.tv/titopinha" target="_blank">Twitch</a> y mantente al tanto de futuros eventos. 
+            ¡Gracias por el apoyo!
+        </p>
+    </footer>
 </body>
 </html>
