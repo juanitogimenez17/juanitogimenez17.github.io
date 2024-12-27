@@ -6,82 +6,77 @@
     <title>Directo Extensible - TitoPinha</title>
     <style>
         /* Estilo general */
-        body {
-            font-family: 'Arial', sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #3b3b98, #6a89cc);
             color: #ffffff;
             text-align: center;
+            min-height: 200vh; /* Asegura suficiente scroll */
+            overflow-x: hidden;
         }
 
-        /* Cabecera principal */
+        /* Cabecera */
         header {
-            padding: 20px;
+            position: sticky;
+            top: 0;
             background-color: rgba(0, 0, 0, 0.7);
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            z-index: 10;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         header p {
-            margin: 10px 0 0;
             font-size: 1.2rem;
+            margin: 5px 0;
         }
 
-        /* Sección principal */
+        /* Contenido principal */
         .content {
-            padding: 40px 20px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
 
-        .content h2 {
+        .content .scroll-text {
             font-size: 2rem;
-            margin-bottom: 20px;
+            opacity: 0.9;
+            transform: translateY(50px);
+            transition: transform 0.5s, opacity 0.5s;
         }
 
-        .content p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
+        /* Efecto de scroll */
+        .content.scrolled .scroll-text {
+            transform: translateY(-100px);
+            opacity: 1;
         }
 
-        /* Botón llamativo */
-        .content a {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 1.5rem;
-            color: #ffffff;
-            background: #9146ff;
-            text-decoration: none;
-            border-radius: 30px;
-            transition: background 0.3s ease;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .content a:hover {
-            background: #772ce8;
-        }
-
-        /* Sección adicional */
-        .footer {
+        /* Pie de página */
+        footer {
             padding: 20px;
             background: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            position: relative;
+            text-align: center;
         }
 
-        .footer p {
-            font-size: 1rem;
-            margin: 0;
-        }
-
-        .footer a {
+        footer a {
             color: #9146ff;
             text-decoration: none;
         }
 
-        .footer a:hover {
+        footer a:hover {
             text-decoration: underline;
         }
     </style>
@@ -94,57 +89,35 @@
     </header>
 
     <!-- Contenido principal -->
-    <main class="content">
-        <h2>¡Hoy es el gran día!</h2>
-        <p>
-            Únete al directo más divertido y caótico del año. Un stream extensible lleno de sorpresas, 
-            risas y mucha emoción. ¡No querrás perdértelo!
-        </p>
-        <a href="https://twitch.tv/titopinha" target="_blank">¡Métete pingo!</a>
-    </main>
+    <div class="content">
+        <p class="scroll-text">¡Hoy es el gran día! Métete al stream extensible. 🚀</p>
+    </div>
 
+    <div class="content">
+        <p class="scroll-text">Únete al caos en Twitch. ¡Te esperamos! 🎉</p>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <!-- Pie de página -->
-    <footer class="footer">
+    <footer>
         <p>
             Sígueme en <a href="https://twitch.tv/titopinha" target="_blank">Twitch</a> y mantente al tanto de futuros eventos. 
             ¡Gracias por el apoyo!
-            Chupame el pingo Guasap
         </p>
     </footer>
+
+    <script>
+        // Detectar scroll y aplicar clases
+        document.addEventListener("scroll", () => {
+            const contents = document.querySelectorAll(".content");
+            contents.forEach((content) => {
+                const rect = content.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top <= window.innerHeight) {
+                    content.classList.add("scrolled");
+                } else {
+                    content.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
