@@ -55,13 +55,23 @@
             font-size: 1.8rem;
             line-height: 1.6;
             opacity: 0.9;
-            transition: opacity 0.5s ease;
         }
 
-        /* Botón */
+        /* Botón flotante */
         .button-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
             display: none;
-            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .button-container.visible {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .button-container a {
@@ -72,8 +82,8 @@
             background: #9146ff;
             text-decoration: none;
             border-radius: 30px;
-            transition: background 0.3s ease, transform 0.2s;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease, transform 0.2s;
         }
 
         .button-container a:hover {
@@ -111,10 +121,11 @@
         <p>¡Hoy es el gran día! Ven al directo extensible. 🚀</p>
         <p>Risas, emoción y caos garantizados. 🎉</p>
         <p>¡Momentos épicos que no querrás perderte! 😎</p>
-        <!-- Contenedor del botón -->
-        <div class="button-container" id="buttonContainer">
-            <a href="https://twitch.tv/titopinha" target="_blank">¡Ir a Twitch!</a>
-        </div>
+    </div>
+
+    <!-- Botón flotante -->
+    <div class="button-container" id="buttonContainer">
+        <a href="https://twitch.tv/titopinha" target="_blank">¡Ir a Twitch!</a>
     </div>
 
     <!-- Pie de página -->
@@ -126,16 +137,17 @@
     </footer>
 
     <script>
-        // Mostrar el botón cuando llegas al final del contenido
+        // Mostrar el botón con animación lenta
         window.addEventListener("scroll", () => {
             const buttonContainer = document.getElementById("buttonContainer");
+            const scrollPosition = window.scrollY;
             const content = document.querySelector(".content");
             const contentBottom = content.getBoundingClientRect().bottom;
 
-            if (contentBottom <= window.innerHeight) {
-                buttonContainer.style.display = "block";
+            if (scrollPosition > 100) {
+                buttonContainer.classList.add("visible");
             } else {
-                buttonContainer.style.display = "none";
+                buttonContainer.classList.remove("visible");
             }
         });
     </script>
