@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAM'S Travel agency</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background: url('travel-banner.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Navigation */
+        nav {
+            background: #007BFF;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background: #0056b3;
+        }
+
+        /* Sections */
+        .section {
+            padding: 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+        .section p {
+            font-size: 1.1em;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        /* Services */
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .service {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+        }
+        .service h3 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: #007BFF;
+            color: white;
+            padding: 20px;
+        }
+        .testimonial {
+            margin-bottom: 20px;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>JAM'S Travel Agency</h1>
+        <p>Your gateway to unforgettable journeys</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a href="https://juanitogimenez17.github.io">JAM's VR Travel</a>
+        <a href="https://juanitogimenez17.github.io/Bird">J's Bird Watch</a>
+        <a href="https://juanitogimenez17.github.io/Hotel">Hotel Service</a>
+    </nav>
+
+    <!-- Section: Services -->
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Flight Bookings</h3>
+                <p>Book flights at the best rates to destinations worldwide.</p>
+            </div>
+            <div class="service">
+                <h3>Custom Packages</h3>
+                <p>Create personalized travel packages to suit your needs.</p>
+            </div>
+            <div class="service">
+                <h3>Accommodation</h3>
+                <p>Find the best hotels, resorts, or vacation rentals for your trip.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Destinations -->
+    <section id="destinations" class="section">
+        <h2>Popular Destinations</h2>
+        <div class="gallery">
+            <img src="paris.jpg" alt="Paris">
+            <img src="maldives.jpg" alt="Maldives">
+            <img src="newyork.jpg" alt="New York">
+            <img src="tokyo.jpg" alt="Tokyo">
+        </div>
+    </section>
+
+    <!-- Section: Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <p>"JAM made our honeymoon truly magical! We can't wait to book with them again."</p>
+            <strong>- Adolf H.</strong>
+        </div>
+        <div class="testimonial">
+            <p>"Best travel agency ever! They handled all the details so I could just enjoy my vacation."</p>
+            <strong>- Aitor S.</strong>
+        </div>
+    </section>
+
+    <!-- Section: Contact -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to book your next adventure? Reach out to us:</p>
+        <p>Email: <a href="mailto:juanitogimenez17@gmail.com">juanitogimenez17@gmail.com</a></p>
+        <p>Phone: +34 722 87 36 50</p>
+        <p>Address: 456 Wanderlust Blvd, Adventure City, World</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ExploreMore Travel Agency. All rights reserved.</p>
+    </footer>
+</body>
+</html>
