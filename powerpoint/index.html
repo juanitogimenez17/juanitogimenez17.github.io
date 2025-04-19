@@ -1,33 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect Notice</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <title>¡Mira esto tío!</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: black;
+    }
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+  </style>
 </head>
-<body>
-    <div>
-        <p>If you end up here, go back to <a href="https://juanitogimenez17.github.io">juanitogimenez17.github.io</a>.</p>
-    </div>
+<body oncontextmenu="return false">
+  <video id="trollvid" autoplay loop controls muted>
+    <source src="https://URL_DEL_VIDEO_AQUI.mp4" type="video/mp4">
+    Tu navegador es una mierda y no soporta vídeo.
+  </video>
+
+  <script>
+    const vid = document.getElementById('trollvid');
+    vid.volume = 1.0;
+    vid.muted = false;
+
+    // Intenta poner pantalla completa
+    function goFullScreen() {
+      const elem = document.documentElement;
+      if (elem.requestFullscreen) elem.requestFullscreen();
+      else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+      else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+    }
+
+    window.onload = () => {
+      vid.play();
+      goFullScreen();
+      setInterval(() => {
+        vid.play(); // Por si lo intentan pausar
+        vid.volume = 1.0;
+        vid.muted = false;
+      }, 500);
+    };
+
+    // Previene cerrar o salir con teclado
+    window.onbeforeunload = function () {
+      return "¿Seguro que quieres irte, cagón?";
+    };
+
+    document.addEventListener('keydown', function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }, true);
+  </script>
 </body>
 </html>
