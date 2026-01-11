@@ -1,2 +1,3 @@
-.text-container {
-text-align: center;
+.texto {
+  text-align: center;   /* left | right | center | justify */
+}
