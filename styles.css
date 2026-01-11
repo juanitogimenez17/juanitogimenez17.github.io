@@ -1,3 +1,199 @@
 .texto {
-  text-align: center;   /* left | right | center | justify */
+width: 300px;
+height: 45px;
+
+text-align: center;   /* left | right | center | justify */
+color: lightblue;
+margin-top: 96px;
+background-color: darkblue;
+position: absolute;
+display: flex;
+left: 44%;
+transform: translate(-50%, -50%);
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+animation: aparecer 2.23s ease-out forwards;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*colors
+
+	black
+
+white
+
+red
+
+green
+
+blue
+
+yellow
+
+cyan
+
+magenta
+
+gray
+
+silver
+
+maroon
+
+olive
+
+navy
+
+teal
+
+purple
+
+lime
+
+aqua
+
+fuchsia
+indianred
+
+lightcoral
+
+salmon
+
+darksalmon
+
+lightsalmon
+
+crimson
+
+firebrick
+
+darkred
+
+pink
+
+lightpink
+
+hotpink
+
+deeppink
+
+mediumvioletred
+
+palevioletred
+
+*/
+body {
+	background-color: blue;
+	 margin: 0;
+	height: 100vh;
+	background-image: url("fondo.jpg");
+	background-size: cover;        /* cubre toda la pantalla */
+	background-position: center;   /* centrada */
+	background-repeat: no-repeat;  /* sin repetir */
+  
+}
+
+.caja {
+  margin-top: 200px;
+  width: 400px;               /* ancho de la caja */
+  padding: 20px;              /* espacio interno */
+  border-radius: 10px;        /* esquinas redondeadas */
+  background-color: white;    /* color de fondo */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* sombra para profundidad */
+  color: lightblue;
+
+  display: flex;
+  flex-direction: column;     /* organiza contenido verticalmente */
+  align-items: center;
+  text-align: center;
+
+  /* Animación de aparición */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: aparecer 1s ease-out forwards;
+  background-color: darkblue;
+position: absolute;
+display: flex;
+left: 41.1%;
+transform: translate(-50%, -50%);
+justify-content: center;
+align-items: center;
+}
+
+.caja a {
+  color: #3498db;
+  text-decoration: none;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.caja a:hover {
+  text-decoration: underline;
+}
+
+/* Animación */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.blud1 {
+width: 440px;
+height: 100px;
+margin-top: 75px;
+text-align: center;   /* left | right | center | justify */
+color: lightblue;
+background-color: darkblue;
+position: absolute;
+display: flex;
+transform: translate(-50%, -50%);
+justify-content: center;
+align-items: center;
+animation: aparecer 2.23s ease-out forwards;
+border-radius: 10px;
+}
+.mi-imagen {
+  width: 70px;        /* ancho */
+  height: auto;        /* altura automática para mantener proporción */
+
+  border-radius: 10px;      /* esquinas redondeadas */
+  display: block;
+  margin: 0 auto;      /* centra horizontalmente */
+}
+.blud2 {
+width: 440px;
+height: 100px;
+margin-top: 315px;
+text-align: center;   /* left | right | center | justify */
+color: lightblue;
+background-color: darkblue;
+position: absolute;
+display: flex;
+transform: translate(-50%, -50%);
+justify-content: center;
+align-items: center;
+animation: aparecer 2.23s ease-out forwards;
+border-radius: 10px;
+}
+.mai-image {
+  width: 70px;        /* ancho */
+  height: auto;        /* altura automática para mantener proporción */
+
+  border-radius: 10px;      /* esquinas redondeadas */
+  display: block;
+  margin: 0 auto;      /* centra horizontalmente */
 }
